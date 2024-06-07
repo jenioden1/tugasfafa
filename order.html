@@ -18,7 +18,9 @@
         const product = document.getElementById("product").value;
         const quantity = document.getElementById("quantity").value;
         const phone = document.getElementById("phone").value;
-        const whatsappUrl = `https://wa.me/6285221454357?text=Nama:%20${name}%0AProduk:%20${product}%0AJumlah:%20${quantity}%0ANomor%20HP:%20${phone}`;
+
+        const alamat = document.getElementById("alamat").value;
+        const whatsappUrl = `https://wa.me/6285221454357?text=Nama:%20${name}%0AProduk:%20${product}%0AJumlah:%20${quantity}%0ANomor%20HP:%20${phone}%0AAlamat%Pembeli:%20${alamat}`;
         window.location.href = whatsappUrl;
       }
 
@@ -122,6 +124,15 @@
             id="quantity"
             class="w-full p-2 border border-gray-300 rounded mt-1"
           />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700">Alamat</label>
+
+          <textarea
+            name="alamat"
+            id="alamat"
+            class="w-full p-2 border border-gray-300 rounded mt-1"
+          ></textarea>
         </div>
         <button
           type="button"
