@@ -1,88 +1,121 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rosdianti Bag - Kontak</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQkTyEqGrBpHl7kOyz5uDf3MD9lfz3JWNRJ5vHZU4C2d2R68ChP9rsfowpwe9NQXciy2EpiKxGsmvl1zg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body class="bg-gray-100 flex flex-col min-h-screen">
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrQkTyEqGrBpHl7kOyz5uDf3MD9lfz3JWNRJ5vHZU4C2d2R68ChP9rsfowpwe9NQXciy2EpiKxGsmvl1zg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-gray-100 flex flex-col min-h-screen">
     <nav class="bg-blue-500 p-4 text-white">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-lg font-bold">Rosdianti Bag</a>
-            <div class="hidden md:flex space-x-4">
-                <a href="index.html" class="hover:underline">Beranda</a>
-                <a href="products.html" class="hover:underline">Produk</a>
-                <a href="order.html" class="hover:underline">Pesan</a>
-                <a href="payment.html" class="hover:underline">Pembayaran</a>
-                <a href="shipping.html" class="hover:underline">Pengiriman</a>
-                <a href="contact.html" class="hover:underline">Kontak</a>
-            </div>
-            <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="index.html" class="text-lg font-bold">Rosdianti Bag</a>
+        <div class="hidden md:flex space-x-4">
+          <a href="index.html" class="hover:underline">Beranda</a>
+          <a href="products.html" class="hover:underline">Produk</a>
+          <a href="order.html" class="hover:underline">Pesan</a>
+          <a href="payment.html" class="hover:underline">Pembayaran</a>
+          <a href="shipping.html" class="hover:underline">Pengiriman</a>
+          <a href="contact.html" class="hover:underline">Kontak</a>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="index.html" class="block p-4 bg-blue-700 hover:bg-blue-600">Beranda</a>
-            <a href="products.html" class="block p-4 bg-blue-700 hover:bg-blue-600">Produk</a>
-            <a href="order.html" class="block p-4 bg-blue-700 hover:bg-blue-600">Pesan</a>
-            <a href="payment.html" class="block p-4 bg-blue-700 hover:bg-blue-600">Pembayaran</a>
-            <a href="shipping.html" class="block p-4 bg-blue-700 hover:bg-blue-600">Pengiriman</a>
-            <a href="contact.html" class="block p-4 bg-blue-700 hover:bg-blue-600">Kontak</a>
-        </div>
+        <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden">
+        <a href="index.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Beranda</a
+        >
+        <a href="products.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Produk</a
+        >
+        <a href="order.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Pesan</a
+        >
+        <a href="payment.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Pembayaran</a
+        >
+        <a href="shipping.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Pengiriman</a
+        >
+        <a href="contact.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Kontak</a
+        >
+      </div>
     </nav>
 
     <div class="container mx-auto mt-10 flex-grow">
-        <h1 class="text-4xl text-center font-bold mb-6">Hubungi Kami</h1>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-2xl font-semibold mb-4">Kontak Informasi</h2>
-            <div class="space-y-4">
-                <div class="flex items-center">
-                    <i class="fas fa-envelope fa-lg text-blue-500 mr-4"></i>
-                    <div>
-                        <p class="text-gray-700">Email:</p>
-                        <p class="text-gray-700 font-semibold">info@rosdiantibag.com</p>
-                    </div>
-                </div>
-                <div class="flex items-center">
-                    <i class="fab fa-whatsapp fa-lg text-green-500 mr-4"></i>
-                    <div>
-                        <p class="text-gray-700">WhatsApp:</p>
-                        <p class="text-gray-700 font-semibold">+62 812-3456-7890</p>
-                    </div>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-phone fa-lg text-blue-500 mr-4"></i>
-                    <div>
-                        <p class="text-gray-700">Telepon:</p>
-                        <p class="text-gray-700 font-semibold">+62 21-1234-5678</p>
-                    </div>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-map-marker-alt fa-lg text-red-500 mr-4"></i>
-                    <div>
-                        <p class="text-gray-700">Alamat:</p>
-                        <p class="text-gray-700 font-semibold">Jl. Kebon Jeruk No. 123, Jakarta, Indonesia</p>
-                    </div>
-                </div>
+      <h1 class="text-4xl text-center font-bold mb-6">Hubungi Kami</h1>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">Kontak Informasi</h2>
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <i class="fas fa-envelope fa-lg text-blue-500 mr-4"></i>
+            <div>
+              <p class="text-gray-700">Email:</p>
+              <p class="text-gray-700 font-semibold">info@rosdiantibag.com</p>
             </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fab fa-whatsapp fa-lg text-green-500 mr-4"></i>
+            <div>
+              <p class="text-gray-700">WhatsApp:</p>
+              <p class="text-gray-700 font-semibold">+62 812-3456-7890</p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-phone fa-lg text-blue-500 mr-4"></i>
+            <div>
+              <p class="text-gray-700">Telepon:</p>
+              <p class="text-gray-700 font-semibold">+62 21-1234-5678</p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-map-marker-alt fa-lg text-red-500 mr-4"></i>
+            <div>
+              <p class="text-gray-700">Alamat:</p>
+              <p class="text-gray-700 font-semibold">
+                Jl. Kebon Jeruk No. 123, Jakarta, Indonesia
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <footer class="bg-blue-500 text-white py-4 mt-auto">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Rosdianti Bag. All rights reserved.</p>
-        </div>
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 Rosdianti Bag. All rights reserved.</p>
+      </div>
     </footer>
 
     <script>
-        function toggleMenu() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        }
+      function toggleMenu() {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      }
     </script>
-
-</body>
+  </body>
 </html>
