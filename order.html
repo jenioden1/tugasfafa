@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rosdianti Bag - Pesan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      function toggleMenu() {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      }
+
+      function submitOrder() {
+        const name = document.getElementById("name").value;
+        const product = document.getElementById("product").value;
+        const quantity = document.getElementById("quantity").value;
+        const phone = document.getElementById("phone").value;
+        const whatsappUrl = `https://wa.me/6285221454357?text=Nama:%20${name}%0AProduk:%20${product}%0AJumlah:%20${quantity}%0ANomor%20HP:%20${phone}`;
+        window.location.href = whatsappUrl;
+      }
+
+      function populateProduct() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get("product");
+        if (product) {
+          document.getElementById("product").value = product;
+        }
+      }
+
+      window.onload = populateProduct;
+    </script>
+  </head>
+  <body class="bg-gray-100 flex flex-col min-h-screen">
+    <nav class="bg-blue-500 p-4 text-white">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="index.html" class="text-lg font-bold">Rosdianti Bag</a>
+        <div class="hidden md:flex space-x-4">
+          <a href="index.html" class="hover:underline">Beranda</a>
+          <a href="products.html" class="hover:underline">Produk</a>
+          <a href="order.html" class="hover:underline">Pesan</a>
+          <a href="payment.html" class="hover:underline">Pembayaran</a>
+          <a href="shipping.html" class="hover:underline">Pengiriman</a>
+          <a href="contact.html" class="hover:underline">Kontak</a>
+        </div>
+        <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden">
+        <a href="index.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Beranda</a
+        >
+        <a href="products.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Produk</a
+        >
+        <a href="order.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Pesan</a
+        >
+        <a href="payment.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Pembayaran</a
+        >
+        <a href="shipping.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Pengiriman</a
+        >
+        <a href="contact.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Kontak</a
+        >
+      </div>
+    </nav>
+
+    <div class="container mx-auto mt-10 flex-grow">
+      <h1 class="text-4xl text-center font-bold">Formulir Pemesanan</h1>
+      <form class="bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto mt-6">
+        <div class="mb-4">
+          <label class="block text-gray-700">Nama</label>
+          <input
+            type="text"
+            id="name"
+            class="w-full p-2 border border-gray-300 rounded mt-1"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700">Nomor HP</label>
+          <input
+            type="text"
+            id="phone"
+            class="w-full p-2 border border-gray-300 rounded mt-1"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700">Produk</label>
+          <select
+            id="product"
+            class="w-full p-2 border border-gray-300 rounded mt-1"
+          >
+            <option value="Tas Elegan Versi 1">Tas Elegan Versi 1</option>
+            <option value="Tas Elegan Versi 2">Tas Elegan Versi 2</option>
+            <option value="Tas Elegan Versi 3">Tas Elegan Versi 3</option>
+            <option value="Tas Elegan Versi 4">Tas Elegan Versi 4</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700">Jumlah</label>
+          <input
+            type="number"
+            id="quantity"
+            class="w-full p-2 border border-gray-300 rounded mt-1"
+          />
+        </div>
+        <button
+          type="button"
+          class="bg-blue-500 text-white p-2 rounded"
+          onclick="submitOrder()"
+        >
+          Pesan Sekarang
+        </button>
+      </form>
+    </div>
+
+    <footer class="bg-blue-500 text-white py-4 mt-auto">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 Rosdianti Bag. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rosdianti Bag - Pembayaran</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 flex flex-col min-h-screen">
+    <nav class="bg-blue-500 p-4 text-white">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="index.html" class="text-lg font-bold">Rosdianti Bag</a>
+        <div class="hidden md:flex space-x-4">
+          <a href="index.html" class="hover:underline">Beranda</a>
+          <a href="products.html" class="hover:underline">Produk</a>
+          <a href="order.html" class="hover:underline">Pesan</a>
+          <a href="payment.html" class="hover:underline">Pembayaran</a>
+          <a href="shipping.html" class="hover:underline">Pengiriman</a>
+          <a href="contact.html" class="hover:underline">Kontak</a>
+        </div>
+        <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden">
+        <a href="index.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Beranda</a
+        >
+        <a href="products.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Produk</a
+        >
+        <a href="order.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Pesan</a
+        >
+        <a href="payment.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Pembayaran</a
+        >
+        <a href="shipping.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Pengiriman</a
+        >
+        <a href="contact.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Kontak</a
+        >
+      </div>
+    </nav>
+
+    <div class="container mx-auto mt-10 flex-grow">
+      <h1 class="text-4xl text-center font-bold mb-6">Cara Pembayaran</h1>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">Metode Pembayaran</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li>
+            <strong>Transfer Bank</strong>
+            <p class="text-gray-700 ml-4">
+              Anda dapat melakukan pembayaran melalui transfer bank ke rekening
+              berikut:
+            </p>
+            <p class="text-gray-700 ml-8"><strong>Bank:</strong> BCA</p>
+            <p class="text-gray-700 ml-8">
+              <strong>Nomor Rekening:</strong> 123-456-789
+            </p>
+            <p class="text-gray-700 ml-8">
+              <strong>Nama Penerima:</strong> Rosdianti Bag
+            </p>
+          </li>
+          <li>
+            <strong>Cash on Delivery (COD)</strong>
+            <p class="text-gray-700 ml-4">
+              Anda dapat membayar langsung kepada kurir saat pesanan Anda tiba
+              di alamat tujuan.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md mt-6">
+        <h2 class="text-2xl font-semibold mb-4">
+          Langkah-langkah Pembayaran Transfer Bank
+        </h2>
+        <ol class="list-decimal list-inside space-y-2">
+          <li>
+            <p class="text-gray-700 ml-4">
+              Lakukan transfer ke nomor rekening yang tertera di atas melalui
+              ATM, internet banking, atau mobile banking.
+            </p>
+          </li>
+          <li>
+            <p class="text-gray-700 ml-4">
+              Setelah melakukan transfer, simpan bukti transfer Anda.
+            </p>
+          </li>
+          <li>
+            <p class="text-gray-700 ml-4">
+              Kirimkan bukti transfer Anda melalui WhatsApp ke nomor berikut:
+              <strong>+62 812-3456-7890</strong> dengan format:
+            </p>
+            <p class="text-gray-700 ml-8">Nama: [Nama Anda]</p>
+            <p class="text-gray-700 ml-8">Jumlah Transfer: [Jumlah Transfer]</p>
+            <p class="text-gray-700 ml-8">
+              Tanggal Transfer: [Tanggal Transfer]
+            </p>
+          </li>
+          <li>
+            <p class="text-gray-700 ml-4">
+              Tunggu konfirmasi dari kami melalui WhatsApp. Setelah pembayaran
+              dikonfirmasi, pesanan Anda akan segera diproses.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <footer class="bg-blue-500 text-white py-4 mt-auto">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 Rosdianti Bag. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
