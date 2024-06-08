@@ -8,6 +8,13 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <style>
+      .product-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+    </style>
     <script>
       function toggleMenu() {
         document.getElementById("mobile-menu").classList.toggle("hidden");
@@ -21,10 +28,9 @@
         <div class="hidden md:flex space-x-4">
           <a href="index.html" class="hover:underline">Beranda</a>
           <a href="products.html" class="hover:underline">Produk</a>
-          <a href="order.html" class="hover:underline">Pesan</a>
-          <a href="payment.html" class="hover:underline">Pembayaran</a>
-          <a href="shipping.html" class="hover:underline">Pengiriman</a>
+          <a href="order.html" class="hover:underline">Pemesanan</a>
           <a href="contact.html" class="hover:underline">Kontak</a>
+          <a href="profil.html" class="hover:underline">Profil Perusahaan</a>
         </div>
         <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
           <svg
@@ -51,16 +57,13 @@
           >Produk</a
         >
         <a href="order.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
-          >Pesan</a
-        >
-        <a href="payment.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
-          >Pembayaran</a
-        >
-        <a href="shipping.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
-          >Pengiriman</a
+          >Pemesanan</a
         >
         <a href="contact.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
           >Kontak</a
+        >
+        <a href="profil.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Profil Perusahaan</a
         >
       </div>
     </nav>
@@ -73,15 +76,17 @@
         <!-- Product Card 1 -->
         <div class="bg-white p-6 rounded-lg shadow-lg">
           <img
-            src="product-01.jpeg"
+            src="/images/product-01.jpeg"
             alt="Tas Elegan Versi 1"
-            class="w-full h-48 object-cover rounded"
+            class="product-image"
           />
-          <h2 class="text-xl font-bold mt-4">Tas Elegan Versi 1</h2>
+          <h2 class="text-xl font-bold mt-4">Tas korea Keysa</h2>
           <p class="mt-2">
             Tas elegan versi pertama dengan desain modern dan material kulit
             berkualitas tinggi.
           </p>
+          <p>Rp : 150.000</p>
+          <p>Stok : 6</p>
           <a
             href="order.html?product=Tas%20Elegan%20Versi%201"
             class="block mt-4 bg-blue-500 text-white py-2 px-4 rounded text-center hover:bg-blue-600"
@@ -91,15 +96,17 @@
         <!-- Product Card 2 -->
         <div class="bg-white p-6 rounded-lg shadow-lg">
           <img
-            src="product-01.jpeg"
+            src="/images/product-02.jpeg"
             alt="Tas Elegan Versi 2"
-            class="w-full h-48 object-cover rounded"
+            class="product-image"
           />
-          <h2 class="text-xl font-bold mt-4">Tas Elegan Versi 2</h2>
+          <h2 class="text-xl font-bold mt-4">Tas Nadya Zipper</h2>
           <p class="mt-2">
-            Tas elegan versi kedua dengan tambahan aksesoris logam yang menambah
-            kesan mewah.
+            Tas elegan versi kedua dengan aksesoris logam yang menambah kesan
+            mewah.
           </p>
+          <p>Rp : 180.000</p>
+          <p>Stok : 16</p>
           <a
             href="order.html?product=Tas%20Elegan%20Versi%202"
             class="block mt-4 bg-blue-500 text-white py-2 px-4 rounded text-center hover:bg-blue-600"
@@ -109,15 +116,17 @@
         <!-- Product Card 3 -->
         <div class="bg-white p-6 rounded-lg shadow-lg">
           <img
-            src="product-01.jpeg"
+            src="/images/product-03.jpeg"
             alt="Tas Elegan Versi 3"
-            class="w-full h-48 object-cover rounded"
+            class="product-image"
           />
-          <h2 class="text-xl font-bold mt-4">Tas Elegan Versi 3</h2>
+          <h2 class="text-xl font-bold mt-4">Tas Clara</h2>
           <p class="mt-2">
             Tas elegan versi ketiga dengan warna hitam klasik dan desain
             minimalis.
           </p>
+          <p>Rp : 210.000</p>
+          <p>Stok : 23</p>
           <a
             href="order.html?product=Tas%20Elegan%20Versi%203"
             class="block mt-4 bg-blue-500 text-white py-2 px-4 rounded text-center hover:bg-blue-600"
@@ -127,17 +136,55 @@
         <!-- Product Card 4 -->
         <div class="bg-white p-6 rounded-lg shadow-lg">
           <img
-            src="product-01.jpeg"
+            src="/images/product-04.jpeg"
             alt="Tas Elegan Versi 4"
-            class="w-full h-48 object-cover rounded"
+            class="product-image"
           />
-          <h2 class="text-xl font-bold mt-4">Tas Elegan Versi 4</h2>
+          <h2 class="text-xl font-bold mt-4">Tas Zize Korean</h2>
           <p class="mt-2">
             Tas elegan versi keempat dengan desain ergonomis untuk kenyamanan
             maksimal.
           </p>
+          <p>Rp : 200.000</p>
+          <p>Stok : 16</p>
           <a
             href="order.html?product=Tas%20Elegan%20Versi%204"
+            class="block mt-4 bg-blue-500 text-white py-2 px-4 rounded text-center hover:bg-blue-600"
+            >Pesan Sekarang</a
+          >
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <img
+            src="/images/product-05.jpg"
+            alt="Tas Elegan Versi 5"
+            class="product-image"
+          />
+          <h2 class="text-xl font-bold mt-4">Tas Mutya</h2>
+          <p class="mt-2">
+            Tas elegan versi kelima dengan desain bagus dan nyaman maksimal.
+          </p>
+          <p>Rp : 240.000</p>
+          <p>Stok : 16</p>
+          <a
+            href="order.html?product=Tas%20Elegan%20Versi%205"
+            class="block mt-4 bg-blue-500 text-white py-2 px-4 rounded text-center hover:bg-blue-600"
+            >Pesan Sekarang</a
+          >
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <img
+            src="/images/product-06.jpg"
+            alt="Tas Elegan Versi 6"
+            class="product-image"
+          />
+          <h2 class="text-xl font-bold mt-4">Tas Gigi Multi Fungsi</h2>
+          <p class="mt-2">
+            Tas elegan versi keenam dengan desain terbaru untuk gen z.
+          </p>
+          <p>Rp : 200.000</p>
+          <p>Stok : 16</p>
+          <a
+            href="order.html?product=Tas%20Elegan%20Versi%206"
             class="block mt-4 bg-blue-500 text-white py-2 px-4 rounded text-center hover:bg-blue-600"
             >Pesan Sekarang</a
           >

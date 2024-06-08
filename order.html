@@ -13,14 +13,24 @@
         document.getElementById("mobile-menu").classList.toggle("hidden");
       }
 
+      const productPrices = {
+        "Tas Elegan Versi 1": 150000,
+        "Tas Elegan Versi 2": 180000,
+        "Tas Elegan Versi 3": 210000,
+        "Tas Elegan Versi 4": 200000,
+        "Tas Elegan Versi 5": 240000,
+        "Tas Elegan Versi 6": 200000,
+      };
+
       function submitOrder() {
         const name = document.getElementById("name").value;
         const product = document.getElementById("product").value;
         const quantity = document.getElementById("quantity").value;
         const phone = document.getElementById("phone").value;
-
+        const totalPrice = document.getElementById("total-price").value;
         const alamat = document.getElementById("alamat").value;
-        const whatsappUrl = `https://wa.me/6285221454357?text=Nama:%20${name}%0AProduk:%20${product}%0AJumlah:%20${quantity}%0ANomor%20HP:%20${phone}%0AAlamat%Pembeli:%20${alamat}`;
+
+        const whatsappUrl = `https://wa.me/6285221454357?text=Nama:%20${name}%0AProduk:%20${product}%0AJumlah:%20${quantity}%0ATotal%20Harga:%20Rp%20${totalPrice}%0ANomor%20HP:%20${phone}%0AAlamat:%20${alamat}`;
         window.location.href = whatsappUrl;
       }
 
@@ -29,10 +39,20 @@
         const product = urlParams.get("product");
         if (product) {
           document.getElementById("product").value = product;
+          updateTotalPrice();
         }
       }
 
       window.onload = populateProduct;
+
+      function updateTotalPrice() {
+        const product = document.getElementById("product").value;
+        const quantity = document.getElementById("quantity").value || 1;
+        const price = productPrices[product];
+        const totalPrice = price * quantity;
+        document.getElementById("total-price").value =
+          totalPrice.toLocaleString("id-ID");
+      }
     </script>
   </head>
   <body class="bg-gray-100 flex flex-col min-h-screen">
@@ -42,10 +62,9 @@
         <div class="hidden md:flex space-x-4">
           <a href="index.html" class="hover:underline">Beranda</a>
           <a href="products.html" class="hover:underline">Produk</a>
-          <a href="order.html" class="hover:underline">Pesan</a>
-          <a href="payment.html" class="hover:underline">Pembayaran</a>
-          <a href="shipping.html" class="hover:underline">Pengiriman</a>
+          <a href="order.html" class="hover:underline">Pemesanan</a>
           <a href="contact.html" class="hover:underline">Kontak</a>
+          <a href="profil.html" class="hover:underline">Profil Perusahaan</a>
         </div>
         <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
           <svg
@@ -72,16 +91,13 @@
           >Produk</a
         >
         <a href="order.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
-          >Pesan</a
-        >
-        <a href="payment.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
-          >Pembayaran</a
-        >
-        <a href="shipping.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
-          >Pengiriman</a
+          >Pemesanan</a
         >
         <a href="contact.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
           >Kontak</a
+        >
+        <a href="profil.html" class="block p-4 bg-blue-700 hover:bg-blue-600"
+          >Profil Perusahaan</a
         >
       </div>
     </nav>
@@ -110,11 +126,14 @@
           <select
             id="product"
             class="w-full p-2 border border-gray-300 rounded mt-1"
+            onchange="updateTotalPrice()"
           >
-            <option value="Tas Elegan Versi 1">Tas Elegan Versi 1</option>
-            <option value="Tas Elegan Versi 2">Tas Elegan Versi 2</option>
-            <option value="Tas Elegan Versi 3">Tas Elegan Versi 3</option>
-            <option value="Tas Elegan Versi 4">Tas Elegan Versi 4</option>
+            <option value="Tas Elegan Versi 1">Tas korea Keysa</option>
+            <option value="Tas Elegan Versi 2">Tas Nadya Zipper</option>
+            <option value="Tas Elegan Versi 3">Tas Clara</option>
+            <option value="Tas Elegan Versi 4">Tas Zize Korean</option>
+            <option value="Tas Elegan Versi 5">Tas Mutya</option>
+            <option value="Tas Elegan Versi 6">Tas Gigi Multi Fungsi</option>
           </select>
         </div>
         <div class="mb-4">
@@ -123,11 +142,22 @@
             type="number"
             id="quantity"
             class="w-full p-2 border border-gray-300 rounded mt-1"
+            value="1"
+            min="1"
+            onchange="updateTotalPrice()"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700">Total Harga (Rp)</label>
+          <input
+            type="text"
+            id="total-price"
+            class="w-full p-2 border border-gray-300 rounded mt-1"
+            readonly
           />
         </div>
         <div class="mb-4">
           <label class="block text-gray-700">Alamat</label>
-
           <textarea
             name="alamat"
             id="alamat"
